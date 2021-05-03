@@ -42,7 +42,7 @@ $button-background: #000;
     padding: 0.75em 1em;
     background: $button-background;
     color: $button-color;
-    border-radius: 0.25em;
+    border-radius: 0.5em;
     line-height: 1;
     transition: 150ms ease;
     text-decoration: none;
@@ -86,7 +86,7 @@ $button-background: #000;
     &-ghost {
         background: transparent;
         color: $button-background;
-        border: 1px solid $button-background;
+        border: 2px solid $button-background;
 
         &:hover,
         &:focus {

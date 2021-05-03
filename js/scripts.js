@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     triggerHook: 1,
                     duration: '300%',
                 })
-                    .setTween(TweenMax.to(word, 1, { y: wordDist, ease: Power0.easeNone }))
+                    .setTween(TweenMax.to(word, 1, { y: wordDist, ease: Power3.easeNone }))
                     //.setTween(TweenMax.to(icon, 1, { y: iconDist, ease: Power3.easeNone }))
                     .addTo(controller)
             }

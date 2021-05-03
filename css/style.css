@@ -1330,7 +1330,7 @@ body.menu-open .mobile_nav {
   padding: 0.75em 1em;
   background: #000;
   color: #fff;
-  border-radius: 0.25em;
+  border-radius: 0.5em;
   line-height: 1;
   transition: 150ms ease;
   text-decoration: none;
@@ -1366,7 +1366,7 @@ body.menu-open .mobile_nav {
 .button-ghost {
   background: transparent;
   color: #000;
-  border: 1px solid #000;
+  border: 2px solid #000;
 }
 .button-ghost:hover, .button-ghost:focus {
   background: transparent;
@@ -2296,11 +2296,11 @@ table td {
 @keyframes inspiration-item-enter {
   from {
     opacity: 0;
-    transform: translate(0, 2em);
+    transform: translate(0, 2em) skewY(5deg);
   }
   to {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 0) skewY(0);
   }
 }
 .inspiration .container {
@@ -2319,6 +2319,8 @@ table td {
   text-align: center;
   opacity: 0;
   transform: translate(0, 2em);
+  -webkit-user-select: none;
+          user-select: none;
 }
 .inspiration-item h2 {
   color: transparent;
@@ -2354,25 +2356,27 @@ table td {
   color: #000000;
 }
 .inspiration-item:nth-of-type(1) h2 {
-  transition: color 2s, transform 0.35s;
+  transition: color 2.5s, transform 0.35s;
 }
 .inspiration-item:nth-of-type(2) {
   grid-row: 2;
   grid-column: 3/span 2;
 }
 .inspiration-item:nth-of-type(2) h2 {
-  transition: color 2.15s, transform 0.35s;
+  transition: color 2.65s, transform 0.35s;
 }
 .inspiration-item:nth-of-type(3) {
   grid-column: 5/span 2;
 }
 .inspiration-item:nth-of-type(3) h2 {
-  transition: color 2.3s, transform 0.35s;
+  transform: translate(0, 20vh);
+  transition: color 2.8s, transform 0.35s;
 }
 .inspiration-item:nth-of-type(4) {
   grid-row: 2;
   grid-column: 7/span 2;
 }
 .inspiration-item:nth-of-type(4) h2 {
-  transition: color 2.45s, transform 0.35s;
+  transform: translate(0, -4vh);
+  transition: color 2.95s, transform 0.35s;
 }
