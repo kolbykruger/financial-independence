@@ -34,8 +34,7 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-gap: 1em;
-        grid-row-gap: 2em;
+        grid-gap: 2em;
     }
 
     &-item {
@@ -47,11 +46,11 @@
         user-select: none;
 
         h2 {
-            @include fluid('font-size', 1.25rem, 5rem);
+            @include fluid('font-size', 1.25rem, 4.5rem);
             color: transparent;
             -webkit-text-stroke: 1px #000;
             text-transform: capitalize;
-            transition: color 1.2s, transform 0.25s;
+            transition: color 1.2s, transform 0.35s;
             transition-timing-function: cubic-bezier(0.53, 0.21, 0, 1);
 
             span {
@@ -94,7 +93,7 @@
             grid-column: 5 / span 2;
 
             h2 {
-                transform: translate(0, 20vh);
+                transform: translate(0, 8em);
                 transition: color 2.8s, transform 0.35s;
             }
         }

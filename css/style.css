@@ -2250,13 +2250,15 @@ table td {
   max-width: 1800px;
 }
 .impression .image {
-  max-height: 80vh;
+  height: 80vh;
+  background: #000000;
 }
 .impression .image img {
   width: 100%;
   height: 80vh;
   object-fit: cover;
   object-position: center;
+  opacity: 0.8;
 }
 .impression .details {
   position: absolute;
@@ -2267,10 +2269,55 @@ table td {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5vw;
+  padding: 1em;
 }
 .impression .details .text {
   text-align: center;
+}
+.impression .details h1,
+.impression .details p,
+.impression .details figure:not(.fig) figcaption,
+figure:not(.fig) .impression .details figcaption {
+  color: #fff;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.08), 0px -5px 35px rgba(0, 0, 0, 0.16);
+}
+.impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 0;
+  letter-spacing: 0.05em;
+}
+.impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 38rem) {
+  .impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+    font-size: calc(1.25rem + 0.25 * ((100vw - 38rem) / 32));
+  }
+}
+@media screen and (min-width: 70rem) {
+  .impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+    font-size: 1.5rem;
+  }
+}
+.impression .details h1 {
+  font-weight: 800;
+  margin: 0.125em 0;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+.impression .details h1 {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 38rem) {
+  .impression .details h1 {
+    font-size: calc(1.25rem + 6.75 * ((100vw - 38rem) / 32));
+  }
+}
+@media screen and (min-width: 70rem) {
+  .impression .details h1 {
+    font-size: 8rem;
+  }
 }
 
 .inspiration {
@@ -2310,8 +2357,7 @@ table td {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 1em;
-  grid-row-gap: 2em;
+  grid-gap: 2em;
 }
 .inspiration-item {
   position: relative;
@@ -2326,7 +2372,7 @@ table td {
   color: transparent;
   -webkit-text-stroke: 1px #000;
   text-transform: capitalize;
-  transition: color 1.2s, transform 0.25s;
+  transition: color 1.2s, transform 0.35s;
   transition-timing-function: cubic-bezier(0.53, 0.21, 0, 1);
 }
 .inspiration-item h2 {
@@ -2334,12 +2380,12 @@ table td {
 }
 @media screen and (min-width: 38rem) {
   .inspiration-item h2 {
-    font-size: calc(1.25rem + 3.75 * ((100vw - 38rem) / 32));
+    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
   .inspiration-item h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 }
 .inspiration-item h2 span {
@@ -2372,7 +2418,7 @@ table td {
   grid-column: 5/span 2;
 }
 .inspiration-item:nth-of-type(3) h2 {
-  transform: translate(0, 20vh);
+  transform: translate(0, 8em);
   transition: color 2.8s, transform 0.35s;
 }
 .inspiration-item:nth-of-type(4) {
