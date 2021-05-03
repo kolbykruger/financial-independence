@@ -1,5 +1,5 @@
 $button-color: #fff;
-$button-background: $color-1;
+$button-background: #000;
 
 /* Button Styling */
 .buttons {
@@ -20,7 +20,6 @@ $button-background: $color-1;
     &-right {
         justify-content: flex-end;
     }
-
 }
 
 // Reset styles for all buttons
@@ -94,14 +93,14 @@ $button-background: $color-1;
             background: transparent;
             box-shadow: none;
             color: $color-2;
-            border-color: $color-2
+            border-color: $color-2;
         }
     }
-    
+
     &[disabled] {
         background: $color-grey-1;
         color: $color-0;
-        cursor:default;
+        cursor: default;
 
         &:hover,
         &:focus {
@@ -111,7 +110,7 @@ $button-background: $color-1;
 
     @media (max-width: 768px) {
         &,
-        + &{
+        + & {
             margin: 0 1em 1em 0;
         }
     }

@@ -42,6 +42,10 @@
 
         > li {
             margin: 0 0 0 32px;
+
+            > a {
+                font-weight: 600;
+            }
         }
 
         li:last-child ul {
@@ -56,7 +60,6 @@
         display: block;
 
         &.open {
-
             > a {
                 color: $color-1;
             }
@@ -70,7 +73,7 @@
     }
 
     a {
-        @include fs(16px);
+        @include fs(17px);
         display: block;
         color: $color-0;
         text-decoration: none;
