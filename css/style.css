@@ -2342,6 +2342,9 @@ table td {
     font-size: 5rem;
   }
 }
+.inspiration-item h2 span {
+  color: #000;
+}
 .inspiration-item .icon {
   position: absolute;
   bottom: 100%;
