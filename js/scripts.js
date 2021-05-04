@@ -18,9 +18,42 @@ document.addEventListener('DOMContentLoaded', function () {
                     triggerHook: 1,
                     duration: '300%',
                 })
-                    .setTween(TweenMax.from(word, 1, { y: iconDist, ease: Power3.easeNone }))
-                    .setTween(TweenMax.to(word, 1, { y: wordDist, ease: Power3.easeNone }))
-                    //.setTween(TweenMax.to(icon, 1, { y: iconDist, ease: Power3.easeNone }))
+                    .setTween(
+                        TweenMax.to(word, 5, {
+                            y: wordDist,
+                            ease: Power0.easeNone,
+                        })
+                    )
+                    .addTo(controller)
+            }
+        }
+    }
+})
+
+//Flip Flops
+document.addEventListener('DOMContentLoaded', function () {
+    let controller = new ScrollMagic.Controller()
+    let elems = document.querySelectorAll('.flip-flops img, .journey img')
+
+    for (let i = 0; i < elems.length; i++) {
+        if (elems[i]) {
+            const elem = elems[i],
+                parent = elem.parentNode.parentNode.parentNode.parentNode
+
+            console.log(parent)
+
+            if (parent) {
+                new ScrollMagic.Scene({
+                    triggerElement: parent,
+                    duration: '200%',
+                    triggerHook: 1,
+                })
+                    .setTween(
+                        TweenMax.to(elem, 5000, {
+                            y: '10%',
+                            ease: Linear.easeNone,
+                        })
+                    )
                     .addTo(controller)
             }
         }
@@ -30,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //ScrollMagic Animations
 document.addEventListener('DOMContentLoaded', function () {
     var controller = new ScrollMagic.Controller()
-    var elems = document.querySelectorAll('section, .inspiration-item')
+    var elems = document.querySelectorAll('section, .inspiration-item, .journey-item')
 
     for (var i = 0; i < elems.length; i++) {
         new ScrollMagic.Scene({

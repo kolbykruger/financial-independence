@@ -1,9 +1,9 @@
 .header {
     .container {
         position: relative;
-        max-width: $container-width;
+        max-width: 1800px;
         width: 100%;
-        padding: 2em;
+        padding: 3.5em 2em;
     }
 
     .group {
@@ -13,7 +13,8 @@
 
     .logo {
         width: 100%;
-        max-width: 240px;
+        max-width: 280px;
+        margin-bottom: 1em;
 
         a {
             display: block;

@@ -1,15 +1,16 @@
 .inspiration {
-    min-height: 80vh;
+    min-height: 40vh;
+    margin-top: 30vh;
     display: grid;
     place-content: center;
 
     &.active {
         .inspiration-item {
-            animation: inspiration-item-enter 0.6s cubic-bezier(0.53, 0.21, 0, 1) forwards;
+            animation: inspiration-item-enter 0.9s cubic-bezier(0.53, 0.21, 0, 1) forwards;
 
             @for $i from 1 through 4 {
                 &:nth-of-type(#{$i}) {
-                    animation-delay: 0.15s * $i;
+                    animation-delay: 0.15s * $i + 0.1;
                 }
             }
 
@@ -78,7 +79,7 @@
 
         &:nth-of-type(1) {
             h2 {
-                transition: color 2.5s, transform 0.35s;
+                transition: color 2.5s, transform 0.15s;
             }
         }
         &:nth-of-type(2) {
@@ -86,15 +87,15 @@
             grid-column: 3 / span 2;
 
             h2 {
-                transition: color 2.65s, transform 0.35s;
+                transition: color 2.65s, transform 0.15s;
             }
         }
         &:nth-of-type(3) {
             grid-column: 5 / span 2;
 
             h2 {
-                transform: translate(0, 8em);
-                transition: color 2.8s, transform 0.35s;
+                //transform: translate(0, 3em);
+                transition: color 2.8s, transform 0.15s;
             }
         }
         &:nth-of-type(4) {
@@ -102,8 +103,8 @@
             grid-column: 7 / span 2;
 
             h2 {
-                transform: translate(0, -4vh);
-                transition: color 2.95s, transform 0.35s;
+                //transform: translate(0, 5em);
+                transition: color 2.95s, transform 0.15s;
             }
         }
     }
