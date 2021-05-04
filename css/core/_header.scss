@@ -1,9 +1,11 @@
 .header {
+    border-top: 0.4em dashed $color-1;
+
     .container {
         position: relative;
-        max-width: 1800px;
+        max-width: 1680px;
         width: 100%;
-        padding: 3.5em 2em;
+        padding: 3em 2em;
     }
 
     .group {

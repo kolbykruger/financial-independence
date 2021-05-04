@@ -1,6 +1,6 @@
 .flip-flops {
     background: $color-grey-2;
-    background: linear-gradient(to bottom, transparent, $color-grey-2);
+    //background: linear-gradient(to bottom, transparent, $color-grey-2);
     overflow: hidden;
 
     .container {
@@ -30,7 +30,7 @@
             object-position: right;
             width: 100%;
             height: 100%;
-            transform: translate(0, -10%);
+            transform: translate(0, -12%);
             box-shadow: inset 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
             //transition: 0.2s;
             //transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
@@ -46,7 +46,7 @@
 
             h2 {
                 @include fluid('font-size', 1.25rem, 4.5rem);
-                text-transform: capitalize;
+                text-transform: inherit;
                 margin-bottom: 0.5em;
             }
 
@@ -58,7 +58,7 @@
             }
 
             .buttons {
-                margin-top: 2em;
+                margin-top: 3em;
             }
         }
     }

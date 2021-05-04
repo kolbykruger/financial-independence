@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                     .setTween(
                         TweenMax.to(elem, 5000, {
-                            y: '10%',
+                            y: '12%',
                             ease: Linear.easeNone,
                         })
                     )
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < elems.length; i++) {
         new ScrollMagic.Scene({
             triggerElement: elems[i],
-            triggerHook: 0.85,
+            triggerHook: 0.9,
             reverse: true,
         })
             .setClassToggle(elems[i], 'active')

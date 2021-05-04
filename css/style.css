@@ -812,11 +812,14 @@ hr::before {
   color: #fff;
 }
 
+.header {
+  border-top: 0.4em dashed #33a3f5;
+}
 .header .container {
   position: relative;
-  max-width: 1800px;
+  max-width: 1680px;
   width: 100%;
-  padding: 3.5em 2em;
+  padding: 3em 2em;
 }
 .header .group {
   justify-content: space-between;
@@ -893,7 +896,7 @@ hr::before {
   padding: 0;
 }
 .nav ul ul {
-  border-radius: 0.5em;
+  border-radius: 0.125em;
   padding: 0.5em 0;
   left: 0;
   opacity: 0;
@@ -902,7 +905,7 @@ hr::before {
   background: #fff;
   white-space: nowrap;
   min-width: 200px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
   text-align: left;
   transition: opacity 0.35s;
   overflow: hidden;
@@ -943,7 +946,6 @@ hr::before {
 }
 .nav > ul > li > a {
   font-weight: 800;
-  text-transform: uppercase;
   letter-spacing: 0.02em;
 }
 .nav > ul li:last-child ul {
@@ -959,7 +961,7 @@ hr::before {
   color: #33a3f5;
 }
 .nav li.open ul {
-  top: calc(100% + 4px);
+  top: calc(100% + 1em);
   opacity: 1;
   z-index: 10;
 }
@@ -2289,7 +2291,7 @@ table td {
 
 .impression {
   position: relative;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow: hidden;
 }
 .impression.active .details h1 {
@@ -2310,12 +2312,12 @@ table td {
   }
 }
 .impression .image {
-  height: 80vh;
+  height: 90vh;
   background: #000000;
 }
 .impression .image img {
   width: 100%;
-  height: 80h;
+  height: 90vh;
   object-fit: cover;
   object-position: center;
   opacity: 0.8;
@@ -2495,7 +2497,6 @@ figure:not(.fig) .impression .details figcaption {
 
 .flip-flops {
   background: #f5f7ff;
-  background: linear-gradient(to bottom, transparent, #f5f7ff);
   overflow: hidden;
 }
 .flip-flops .container {
@@ -2526,7 +2527,7 @@ figure:not(.fig) .impression .details figcaption {
   object-position: right;
   width: 100%;
   height: 100%;
-  transform: translate(0, -10%);
+  transform: translate(0, -12%);
   box-shadow: inset 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
 }
 .flip-flops .details {
@@ -2537,7 +2538,7 @@ figure:not(.fig) .impression .details figcaption {
   max-width: 42em;
 }
 .flip-flops .details .text h2 {
-  text-transform: capitalize;
+  text-transform: inherit;
   margin-bottom: 0.5em;
 }
 .flip-flops .details .text h2 {
@@ -2572,7 +2573,7 @@ figure:not(.fig) .impression .details figcaption {
   }
 }
 .flip-flops .details .text .buttons {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .journey {
@@ -2607,7 +2608,7 @@ figure:not(.fig) .impression .details figcaption {
 }
 .journey .section-heading {
   text-align: center;
-  max-width: 768px;
+  max-width: 900px;
   margin: 5vh auto;
 }
 .journey .section-heading h2 {
@@ -2650,7 +2651,7 @@ figure:not(.fig) .impression .details figcaption {
   object-position: center;
   width: 100%;
   height: 100%;
-  transform: translate(0, -10%);
+  transform: translate(0, -12%);
   box-shadow: inset 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
 }
 .journey-item:nth-of-type(even) {
