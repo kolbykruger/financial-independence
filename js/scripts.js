@@ -3,20 +3,21 @@ let controller = new ScrollMagic.Controller()
 
 //Journey Line
 document.addEventListener('DOMContentLoaded', function () {
-    let elem = document.querySelector('.journey')
+    let elem = document.querySelector('.journey-line')
     let maskPath = document.getElementById('maskPath')
 
     if (elem && maskPath) {
         new ScrollMagic.Scene({
             triggerElement: elem,
-            triggerHook: 0.9,
-            reverse: false,
+            triggerHook: 0.75,
+            duration: '65%',
+            reverse: true,
         })
+            //.setTween(tl)
+            //.addIndicators()
             .setTween(
                 gsap.from(maskPath, {
-                    duration: 3,
-                    delay: 0.5,
-                    drawSVG: 0,
+                    drawSVG: 1,
                     ease: Power0.easeNone,
                 })
             )
