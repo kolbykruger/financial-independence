@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new ScrollMagic.Scene({
             triggerElement: elem,
             triggerHook: 0.9,
-            reverse: true,
+            reverse: false,
         })
             .setTween(
                 gsap.from(maskPath, {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const elem = elems[i],
                 word = elems[i].querySelector('h2'),
                 icon = elems[i].querySelector('.icon'),
-                parent = elem.parentNode.parentNode.parentNode.parentNode,
+                parent = elem.parentNode.parentNode.parentNode,
                 wordDist = elem.dataset.word,
                 iconDist = elem.dataset.icon
 
@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 new ScrollMagic.Scene({
                     triggerElement: parent,
                     triggerHook: 1,
-                    duration: '300%',
+                    duration: '160%',
+                    reverse: true,
                 })
                     .setTween(
                         TweenMax.to(word, 5, {
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     triggerElement: parent,
                     duration: '200%',
                     triggerHook: 1,
+                    reverse: true,
                 })
                     .setTween(
                         TweenMax.to(elem, 5000, {
@@ -93,6 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
             triggerElement: elem,
             duration: '200%',
             triggerHook: 1,
+            reverse: true,
         })
             .setTween(
                 TweenMax.to(elemImage, 5000, {
@@ -112,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new ScrollMagic.Scene({
             triggerElement: elems[i],
             triggerHook: 0.9,
-            reverse: true,
+            reverse: false,
         })
             .setClassToggle(elems[i], 'active')
             //.addIndicators()
@@ -133,7 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 new ScrollMagic.Scene({
                     triggerElement: elems[i],
                     triggerHook: 0.9,
-                    reverse: true,
                 })
                     .setTween(
                         TweenMax.to(magicBackground, 1.5, {

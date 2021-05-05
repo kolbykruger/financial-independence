@@ -2108,10 +2108,14 @@ p.simplesearch-results, address.simplesearch-results, figure:not(.fig) figcaptio
 .carousel .slide .button {
   margin: 0.5em 0;
 }
+.features.active .features-item {
+  transform: translate(0, 0) skewX(0);
+  opacity: 1;
+}
 .features .section-heading {
   text-align: center;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 5vh;
 }
 .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
   text-transform: inherit;
@@ -2148,6 +2152,30 @@ p.simplesearch-results, address.simplesearch-results, figure:not(.fig) figcaptio
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 5vw;
   padding: 3em;
+}
+.features-item {
+  transform: translate(0, 3em) skewX(-5deg);
+  opacity: 0;
+  will-change: transform;
+  transition: 620ms cubic-bezier(0.6, 0.2, 0.1, 1);
+}
+.features-item:nth-of-type(1) {
+  transition-delay: 0.35s;
+}
+.features-item:nth-of-type(2) {
+  transition-delay: 0.5s;
+}
+.features-item:nth-of-type(3) {
+  transition-delay: 0.65s;
+}
+.features-item:nth-of-type(4) {
+  transition-delay: 0.8s;
+}
+.features-item:nth-of-type(5) {
+  transition-delay: 0.95s;
+}
+.features-item:nth-of-type(6) {
+  transition-delay: 1.1s;
 }
 .features-item h3 {
   margin: 1em 0 0.5em;
@@ -2413,6 +2441,7 @@ figure:not(.fig) .impression .details figcaption {
   margin: 0.125em 0;
   line-height: 1;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
   transition: color 2.2s, transform 0.35s;
@@ -2562,6 +2591,8 @@ figure:not(.fig) .impression .details figcaption {
 .flip-flops .section-heading {
   max-width: 1250px;
   padding: 0 3em;
+  text-align: center;
+  margin: 0 auto 10vh;
 }
 .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
   text-transform: inherit;
@@ -2599,6 +2630,9 @@ figure:not(.fig) .impression .details figcaption {
   height: 100%;
   transform: translate(0, -12%);
   box-shadow: inset 0 0.625em 1.25em rgba(35, 45, 75, 0.15);
+}
+.flip-flops.flip-flops-alternate .image {
+  aspect-ratio: 6/3;
 }
 .flip-flops .details {
   flex: 1;
