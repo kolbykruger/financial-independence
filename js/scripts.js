@@ -1,6 +1,29 @@
+//Global Definition for ScrollMagic Controller
+let controller = new ScrollMagic.Controller()
+
+//Journey Line
+
+document.addEventListener('DOMContentLoaded', function () {
+    let elem = document.querySelector('.journey')
+
+    new ScrollMagic.Scene({
+        triggerElement: elem,
+        triggerHook: 0.9,
+        reverse: true,
+    })
+        .setTween(
+            gsap.from('#maskPath', {
+                duration: 3,
+                delay: 0.5,
+                drawSVG: 0,
+                ease: Power0.easeNone,
+            })
+        )
+        .addTo(controller)
+})
+
 //Inspiration Animation
 document.addEventListener('DOMContentLoaded', function () {
-    let controller = new ScrollMagic.Controller()
     let elems = document.querySelectorAll('.inspiration .inspiration-item')
 
     for (let i = 0; i < elems.length; i++) {
@@ -32,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Flip Flops
 document.addEventListener('DOMContentLoaded', function () {
-    let controller = new ScrollMagic.Controller()
     let elems = document.querySelectorAll('.flip-flops img, .journey img')
 
     for (let i = 0; i < elems.length; i++) {

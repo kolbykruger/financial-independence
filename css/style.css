@@ -916,7 +916,7 @@ hr::before {
   font-size: 0.9375rem;
   padding: 1em 1.5em;
   margin: 0;
-  font-weight: 500;
+  font-weight: 800;
 }
 .nav ul ul a::after {
   content: "";
@@ -925,14 +925,17 @@ hr::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(51, 163, 245, 0.15);
   z-index: -1;
   transform: scaleX(0);
   transform-origin: 100% 100%;
   transition: transform 0.4s cubic-bezier(0.53, 0.21, 0, 1);
   will-change: transform;
 }
-.nav ul ul a:hover::after, .nav ul ul a:focus::after {
+.nav ul ul a:not(.button):hover, .nav ul ul a:not(.button):focus {
+  color: #000000;
+}
+.nav ul ul a:not(.button):hover::after, .nav ul ul a:not(.button):focus::after {
   transform: scaleX(1);
   transform-origin: 0% 0%;
 }
@@ -1351,7 +1354,7 @@ body.menu-open .mobile_nav {
   display: inline-flex;
   align-items: center;
   margin: 0;
-  padding: 0.75em 1em;
+  padding: 1em 1.25em;
   background: #000;
   color: #fff;
   border-radius: 0.5em;
@@ -1389,9 +1392,8 @@ body.menu-open .mobile_nav {
 }
 .button-ghost {
   position: relative;
-  background: transparent;
+  background: rgba(51, 163, 245, 0.2);
   color: #000;
-  border: 2px solid #000;
   font-weight: 600;
 }
 .button-ghost::after {
@@ -1401,8 +1403,8 @@ body.menu-open .mobile_nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #33a3f5;
-  border-radius: 0.35em;
+  background: rgba(51, 163, 245, 0.2);
+  border-radius: 0.5em;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: 100% 100%;
@@ -1410,7 +1412,7 @@ body.menu-open .mobile_nav {
   will-change: transform;
 }
 .button-ghost:hover, .button-ghost:focus {
-  background: transparent;
+  background: rgba(51, 163, 245, 0.15);
   color: #000;
   box-shadow: none;
 }
@@ -1427,7 +1429,6 @@ body.menu-open .mobile_nav {
   box-shadow: none;
 }
 .button-size-large {
-  padding: 0.75em 1em;
   font-size: 1.25rem;
 }
 @media (max-width: 768px) {
@@ -2496,7 +2497,6 @@ figure:not(.fig) .impression .details figcaption {
 }
 
 .flip-flops {
-  background: #f5f7ff;
   overflow: hidden;
 }
 .flip-flops .container {
