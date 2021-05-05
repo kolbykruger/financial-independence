@@ -555,28 +555,28 @@ body {
   overflow-x: hidden;
 }
 
-p, figure:not(.fig) figcaption {
+p, figure:not(.fig) figcaption, address {
   font-size: 18px;
   font-size: 1.125rem;
   margin: 0 0 1em;
   font-weight: 400;
   line-height: 1.6;
 }
-p, figure:not(.fig) figcaption {
+p, figure:not(.fig) figcaption, address {
   font-size: 1rem;
 }
 @media screen and (min-width: 38rem) {
-  p, figure:not(.fig) figcaption {
+  p, figure:not(.fig) figcaption, address {
     font-size: calc(1rem + 0.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  p, figure:not(.fig) figcaption {
+  p, figure:not(.fig) figcaption, address {
     font-size: 1.25rem;
   }
 }
 
-p:last-of-type, figure:not(.fig) figcaption:last-of-type {
+p:last-of-type, figure:not(.fig) figcaption:last-of-type, address:last-of-type {
   margin: 0;
 }
 
@@ -602,20 +602,20 @@ h1 {
   }
 }
 
-h2 {
+h2, .features-item .icon {
   line-height: 1.3;
   font-weight: 600;
 }
-h2 {
+h2, .features-item .icon {
   font-size: 1.75rem;
 }
 @media screen and (min-width: 38rem) {
-  h2 {
+  h2, .features-item .icon {
     font-size: calc(1.75rem + 0.75 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  h2 {
+  h2, .features-item .icon {
     font-size: 2.5rem;
   }
 }
@@ -640,10 +640,10 @@ h3 {
 
 h1,
 h2,
+.features-item .icon,
 h3 {
   margin: 0 0 0.25em;
   width: 100%;
-  text-transform: uppercase;
 }
 
 ol,
@@ -812,9 +812,17 @@ hr::before {
   color: #fff;
 }
 
-.header {
-  border-top: 0.4em dashed #33a3f5;
+#background-magic {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transition: 320ms ease-out;
 }
+
 .header .container {
   position: relative;
   max-width: 1680px;
@@ -828,7 +836,6 @@ hr::before {
 .header .logo {
   width: 100%;
   max-width: 280px;
-  margin-bottom: 1em;
 }
 .header .logo a {
   display: block;
@@ -1158,32 +1165,51 @@ body.menu-open .mobile_nav {
 .footer {
   width: 100%;
   background: #f5f7ff;
-  margin: 1em 0 0;
+  padding: 8vh 0 1.5em;
 }
 .footer .group {
+  justify-content: space-between;
+}
+.footer-contact a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+  transition: 320ms ease-out;
+}
+.footer-contact a:hover, .footer-contact a:focus {
+  color: #33a3f5;
+}
+.footer-contact .email {
+  font-size: 2.25rem;
+}
+.footer-contact .email a {
+  color: #33a3f5;
+  text-decoration: underline;
+}
+.footer-contact .phone {
+  font-size: 2.25rem;
+}
+.footer-contact .address {
   margin-top: 3em;
 }
-.footer-logo {
-  flex: 1;
-  padding-right: 5em;
+.footer-contact .legal {
+  margin-top: 3em;
 }
-.footer-logo img {
-  width: 100%;
-  max-width: 100px;
-}
-.footer-nav {
-  flex: 4;
+.footer-cta {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
 }
-.footer-section {
-  flex: 1;
-  padding-right: 20px;
+.footer-badges {
+  margin-top: 5em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
-.footer-section h3 {
-  font-size: 1.25rem;
+.footer-badges img {
+  max-width: 160px;
+  margin: 0.5em;
 }
 .footer-links {
   list-style-type: none;
@@ -1202,9 +1228,9 @@ body.menu-open .mobile_nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 3em;
-  padding-top: 2em;
-  border-top: 1px solid #ddd;
+  margin-top: 4vh;
+  padding-top: 4vh;
+  opacity: 0.6;
 }
 .footer .ewd {
   width: 200px;
@@ -1393,6 +1419,7 @@ body.menu-open .mobile_nav {
 .button-ghost {
   position: relative;
   background: rgba(51, 163, 245, 0.2);
+  box-shadow: 0px 14px 55px rgba(51, 163, 245, 0.08);
   color: #000;
   font-weight: 600;
 }
@@ -1412,9 +1439,9 @@ body.menu-open .mobile_nav {
   will-change: transform;
 }
 .button-ghost:hover, .button-ghost:focus {
-  background: rgba(51, 163, 245, 0.15);
+  background: rgba(51, 163, 245, 0.2);
   color: #000;
-  box-shadow: none;
+  box-shadow: 0px 14px 55px rgba(51, 163, 245, 0.08);
 }
 .button-ghost:hover::after, .button-ghost:focus::after {
   transform: scaleX(1);
@@ -1701,7 +1728,7 @@ body.menu-open .mobile_nav {
 }
 
 /* Search Results */
-p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
+p.simplesearch-results, address.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
 .simplesearch-paging {
   margin: 1em auto;
 }
@@ -2081,36 +2108,52 @@ p.simplesearch-results, figure:not(.fig) figcaption.simplesearch-results,
 .carousel .slide .button {
   margin: 0.5em 0;
 }
-.features .group {
-  margin: 0 -2em;
+.features .section-heading {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .features .group {
-    margin: 0;
+.features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
+  text-transform: inherit;
+}
+.features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 38rem) {
+  .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
+    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
   }
 }
-.features .item {
-  text-decoration: none;
-  display: block;
-  color: inherit;
-  position: relative;
-  margin: 1em;
-  width: calc(33.333% - 2em);
-  background: #fff;
-  border-radius: 0.25em;
-  transition: 250ms ease;
-  overflow: hidden;
+@media screen and (min-width: 70rem) {
+  .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
+    font-size: 4.5rem;
+  }
 }
-.features .item .info {
-  width: 100%;
-  padding: 1em;
+.features .container {
+  max-width: 100%;
+  padding: 5vh 270px;
 }
-.features .item:hover, .features .item:focus {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+@media (max-width: 1920px) {
+  .features .container {
+    padding: 5vh 120px;
+  }
 }
-.features img {
-  width: 100%;
-  height: auto;
+@media (max-width: 1500px) {
+  .features .container {
+    padding: 5vh 60px;
+  }
+}
+.features .group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5vw;
+  padding: 3em;
+}
+.features-item h3 {
+  margin: 1em 0 0.5em;
+}
+.features-item .desc {
+  max-width: 42em;
 }
 
 .gallery {
@@ -2322,6 +2365,7 @@ table td {
   object-fit: cover;
   object-position: center;
   opacity: 0.8;
+  transform: translate(0, -10%);
 }
 .impression .details {
   position: absolute;
@@ -2339,27 +2383,28 @@ table td {
 }
 .impression .details h1,
 .impression .details p,
+.impression .details address,
 .impression .details figure:not(.fig) figcaption,
 figure:not(.fig) .impression .details figcaption {
   color: #fff;
   text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.08), 0px -5px 35px rgba(0, 0, 0, 0.16);
 }
-.impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+.impression .details p, .impression .details address, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
   text-transform: uppercase;
   font-weight: 600;
   margin-bottom: 0;
   letter-spacing: 0.05em;
 }
-.impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+.impression .details p, .impression .details address, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
   font-size: 1.25rem;
 }
 @media screen and (min-width: 38rem) {
-  .impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+  .impression .details p, .impression .details address, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
     font-size: calc(1.25rem + 0.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  .impression .details p, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
+  .impression .details p, .impression .details address, .impression .details figure:not(.fig) figcaption, figure:not(.fig) .impression .details figcaption {
     font-size: 1.5rem;
   }
 }
@@ -2370,7 +2415,8 @@ figure:not(.fig) .impression .details figcaption {
   letter-spacing: 0.1em;
   color: transparent;
   -webkit-text-stroke: 1px #fff;
-  transition: color 1.2s, transform 0.35s;
+  transition: color 2.2s, transform 0.35s;
+  transition-delay: 200ms;
   transition-timing-function: cubic-bezier(0.53, 0.21, 0, 1);
 }
 .impression .details h1 {
@@ -2436,27 +2482,27 @@ figure:not(.fig) .impression .details figcaption {
   -webkit-user-select: none;
           user-select: none;
 }
-.inspiration-item h2 {
+.inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
   color: transparent;
   -webkit-text-stroke: 1px #000;
   text-transform: capitalize;
   transition: color 1.2s, transform 0.35s;
   transition-timing-function: cubic-bezier(0.53, 0.21, 0, 1);
 }
-.inspiration-item h2 {
+.inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
   font-size: 1.25rem;
 }
 @media screen and (min-width: 38rem) {
-  .inspiration-item h2 {
+  .inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
     font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  .inspiration-item h2 {
+  .inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
     font-size: 4.5rem;
   }
 }
-.inspiration-item h2 span {
+.inspiration-item h2 span, .inspiration-item .features-item .icon span, .features-item .inspiration-item .icon span {
   color: #000;
 }
 .inspiration-item .icon {
@@ -2469,30 +2515,30 @@ figure:not(.fig) .impression .details figcaption {
   opacity: 0.05;
   color: #000000;
 }
-.inspiration-item.active h2 {
+.inspiration-item.active h2, .inspiration-item.active .features-item .icon, .features-item .inspiration-item.active .icon {
   color: #000000;
 }
-.inspiration-item:nth-of-type(1) h2 {
+.inspiration-item:nth-of-type(1) h2, .inspiration-item:nth-of-type(1) .features-item .icon, .features-item .inspiration-item:nth-of-type(1) .icon {
   transition: color 2.5s, transform 0.15s;
 }
 .inspiration-item:nth-of-type(2) {
   grid-row: 2;
   grid-column: 3/span 2;
 }
-.inspiration-item:nth-of-type(2) h2 {
+.inspiration-item:nth-of-type(2) h2, .inspiration-item:nth-of-type(2) .features-item .icon, .features-item .inspiration-item:nth-of-type(2) .icon {
   transition: color 2.65s, transform 0.15s;
 }
 .inspiration-item:nth-of-type(3) {
   grid-column: 5/span 2;
 }
-.inspiration-item:nth-of-type(3) h2 {
+.inspiration-item:nth-of-type(3) h2, .inspiration-item:nth-of-type(3) .features-item .icon, .features-item .inspiration-item:nth-of-type(3) .icon {
   transition: color 2.8s, transform 0.15s;
 }
 .inspiration-item:nth-of-type(4) {
   grid-row: 2;
   grid-column: 7/span 2;
 }
-.inspiration-item:nth-of-type(4) h2 {
+.inspiration-item:nth-of-type(4) h2, .inspiration-item:nth-of-type(4) .features-item .icon, .features-item .inspiration-item:nth-of-type(4) .icon {
   transition: color 2.95s, transform 0.15s;
 }
 
@@ -2513,8 +2559,32 @@ figure:not(.fig) .impression .details figcaption {
     padding: 5vh 60px;
   }
 }
+.flip-flops .section-heading {
+  max-width: 1250px;
+  padding: 0 3em;
+}
+.flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
+  text-transform: inherit;
+  margin-bottom: 0.5em;
+}
+.flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 38rem) {
+  .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
+    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
+  }
+}
+@media screen and (min-width: 70rem) {
+  .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
+    font-size: 4.5rem;
+  }
+}
 .flip-flops .group {
   align-items: center;
+}
+.flip-flops .group.group-start {
+  align-items: flex-start;
 }
 .flip-flops .image {
   flex: 1;
@@ -2537,20 +2607,20 @@ figure:not(.fig) .impression .details figcaption {
   padding: 3em;
   max-width: 42em;
 }
-.flip-flops .details .text h2 {
+.flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
   text-transform: inherit;
   margin-bottom: 0.5em;
 }
-.flip-flops .details .text h2 {
+.flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
   font-size: 1.25rem;
 }
 @media screen and (min-width: 38rem) {
-  .flip-flops .details .text h2 {
+  .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
     font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  .flip-flops .details .text h2 {
+  .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
     font-size: 4.5rem;
   }
 }
@@ -2574,6 +2644,34 @@ figure:not(.fig) .impression .details figcaption {
 }
 .flip-flops .details .text .buttons {
   margin-top: 3em;
+}
+.flip-flops .icon-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.flip-flops .icon-group li {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 0.75em;
+  padding-bottom: 1em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  background-position: bottom left;
+  background-image: url("../images/dots.png");
+  background-repeat: repeat-x;
+}
+.flip-flops .icon-group li:first-of-type {
+  padding-top: 0;
+}
+.flip-flops .icon-group li:last-of-type {
+  background-image: none;
+}
+.flip-flops .icon-group li .icon {
+  margin-right: 1.5em;
+  color: #33a3f5;
+  font-size: 1.5rem;
 }
 
 .journey {
@@ -2611,19 +2709,19 @@ figure:not(.fig) .impression .details figcaption {
   max-width: 900px;
   margin: 5vh auto;
 }
-.journey .section-heading h2 {
+.journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
   text-transform: inherit;
 }
-.journey .section-heading h2 {
+.journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
   font-size: 1.25rem;
 }
 @media screen and (min-width: 38rem) {
-  .journey .section-heading h2 {
+  .journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
     font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
-  .journey .section-heading h2 {
+  .journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
     font-size: 4.5rem;
   }
 }

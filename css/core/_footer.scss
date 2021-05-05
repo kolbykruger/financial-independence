@@ -1,40 +1,66 @@
 .footer {
     width: 100%;
     background: $color-grey-2;
-    margin: 1em 0 0;
+    padding: 8vh 0 1.5em;
 
     .container {
-
     }
 
     .group {
-        margin-top: 3em;
+        justify-content: space-between;
     }
 
-    &-logo {
-        flex: 1;
-        padding-right: 5em;
+    &-contact {
+        a {
+            text-decoration: none;
+            color: $color-0;
+            font-weight: 500;
+            transition: 320ms ease-out;
 
-        img {
-            width: 100%;
-            max-width: 100px;
+            &:hover,
+            &:focus {
+                color: $color-1;
+            }
+        }
+
+        .email {
+            font-size: 2.25rem;
+
+            a {
+                color: $color-1;
+                text-decoration: underline;
+            }
+        }
+
+        .phone {
+            font-size: 2.25rem;
+        }
+
+        .address {
+            margin-top: 3em;
+        }
+
+        .legal {
+            margin-top: 3em;
         }
     }
 
-    &-nav {
-        flex: 4;
+    &-cta {
         display: flex;
-        flex-flow: row nowrap;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
     }
 
-    &-section {
-        flex: 1;
-        padding-right: 20px;
+    &-badges {
+        margin-top: 5em;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-end;
+        justify-content: flex-end;
 
-        h3 {
-            font-size: 1.25rem;
+        img {
+            max-width: 160px;
+            margin: 0.5em;
         }
     }
 
@@ -43,7 +69,6 @@
         padding: 0;
 
         li {
-
         }
 
         a {
@@ -63,14 +88,14 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        margin-top: 3em;
-        padding-top: 2em;
-        border-top: 1px solid #ddd;
+        margin-top: 4vh;
+        padding-top: 4vh;
+        opacity: 0.6;
     }
 
     .ewd {
         width: 200px;
-        line-height:1;
+        line-height: 1;
 
         img {
             width: 100%;

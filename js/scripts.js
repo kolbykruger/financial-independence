@@ -2,24 +2,26 @@
 let controller = new ScrollMagic.Controller()
 
 //Journey Line
-
 document.addEventListener('DOMContentLoaded', function () {
     let elem = document.querySelector('.journey')
+    let maskPath = document.getElementById('maskPath')
 
-    new ScrollMagic.Scene({
-        triggerElement: elem,
-        triggerHook: 0.9,
-        reverse: true,
-    })
-        .setTween(
-            gsap.from('#maskPath', {
-                duration: 3,
-                delay: 0.5,
-                drawSVG: 0,
-                ease: Power0.easeNone,
-            })
-        )
-        .addTo(controller)
+    if (elem && maskPath) {
+        new ScrollMagic.Scene({
+            triggerElement: elem,
+            triggerHook: 0.9,
+            reverse: true,
+        })
+            .setTween(
+                gsap.from(maskPath, {
+                    duration: 3,
+                    delay: 0.5,
+                    drawSVG: 0,
+                    ease: Power0.easeNone,
+                })
+            )
+            .addTo(controller)
+    }
 })
 
 //Inspiration Animation
@@ -62,8 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const elem = elems[i],
                 parent = elem.parentNode.parentNode.parentNode.parentNode
 
-            console.log(parent)
-
             if (parent) {
                 new ScrollMagic.Scene({
                     triggerElement: parent,
@@ -82,9 +82,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 })
 
+//Impression
+document.addEventListener('DOMContentLoaded', function () {
+    let elem = document.querySelector('.impression')
+
+    if (elem) {
+        let elemImage = elem.querySelector('img')
+
+        new ScrollMagic.Scene({
+            triggerElement: elem,
+            duration: '200%',
+            triggerHook: 1,
+        })
+            .setTween(
+                TweenMax.to(elemImage, 5000, {
+                    y: '10%',
+                    ease: Linear.easeNone,
+                })
+            )
+            .addTo(controller)
+    }
+})
+
 //ScrollMagic Animations
 document.addEventListener('DOMContentLoaded', function () {
-    var controller = new ScrollMagic.Controller()
     var elems = document.querySelectorAll('section, .inspiration-item, .journey-item')
 
     for (var i = 0; i < elems.length; i++) {
@@ -96,6 +117,33 @@ document.addEventListener('DOMContentLoaded', function () {
             .setClassToggle(elems[i], 'active')
             //.addIndicators()
             .addTo(controller)
+    }
+})
+
+//background magic
+document.addEventListener('DOMContentLoaded', function () {
+    const magicBackground = document.getElementById('background-magic')
+    const elems = document.querySelectorAll('section')
+
+    if (magicBackground) {
+        for (var i = 0; i < elems.length; i++) {
+            if (elems[i]) {
+                const magicColor = elems[i].dataset.color
+
+                new ScrollMagic.Scene({
+                    triggerElement: elems[i],
+                    triggerHook: 0.9,
+                    reverse: true,
+                })
+                    .setTween(
+                        TweenMax.to(magicBackground, 1.5, {
+                            backgroundColor: magicColor ? magicColor : 'transparent',
+                        })
+                    )
+                    //.addIndicators()
+                    .addTo(controller)
+            }
+        }
     }
 })
 

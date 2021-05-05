@@ -86,7 +86,6 @@ h2,
 h3 {
     margin: 0 0 0.25em;
     width: 100%;
-    text-transform: uppercase;
 }
 
 ol,
@@ -140,6 +139,7 @@ blockquote::after {
 }
 
 address {
+    @extend p;
     font-style: normal;
 }
 
@@ -273,4 +273,15 @@ hr::before {
 ::-moz-selection {
     background: $color-1;
     color: #fff;
+}
+
+#background-magic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: 320ms ease-out;
 }
