@@ -47,7 +47,7 @@
         user-select: none;
 
         h2 {
-            @include fluid('font-size', 1.25rem, 4.5rem);
+            @include fluid('font-size', 1.25rem, 3rem);
             color: transparent;
             -webkit-text-stroke: 1px #000;
             text-transform: capitalize;
@@ -56,6 +56,13 @@
 
             span {
                 color: #000;
+            }
+
+            @media (min-width: 1500px) {
+                font-size: 3.5rem;
+            }
+            @media (min-width: 1921px) {
+                font-size: 4.5rem;
             }
         }
 

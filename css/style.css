@@ -2118,17 +2118,19 @@ p.simplesearch-results, address.simplesearch-results, figure:not(.fig) figcaptio
   margin: 0 auto 5vh;
 }
 .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
-  text-transform: inherit;
-}
-.features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
   font-size: 1.25rem;
 }
 @media screen and (min-width: 38rem) {
   .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
-    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
+    font-size: calc(1.25rem + 2.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
+  .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1921px) {
   .features .section-heading h2, .features .section-heading .features-item .icon, .features-item .features .section-heading .icon {
     font-size: 4.5rem;
   }
@@ -2523,16 +2525,26 @@ figure:not(.fig) .impression .details figcaption {
 }
 @media screen and (min-width: 38rem) {
   .inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
-    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
+    font-size: calc(1.25rem + 1.75 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
   .inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 }
 .inspiration-item h2 span, .inspiration-item .features-item .icon span, .features-item .inspiration-item .icon span {
   color: #000;
+}
+@media (min-width: 1500px) {
+  .inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1921px) {
+  .inspiration-item h2, .inspiration-item .features-item .icon, .features-item .inspiration-item .icon {
+    font-size: 4.5rem;
+  }
 }
 .inspiration-item .icon {
   position: absolute;
@@ -2595,7 +2607,6 @@ figure:not(.fig) .impression .details figcaption {
   margin: 0 auto 10vh;
 }
 .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
-  text-transform: inherit;
   margin-bottom: 0.5em;
 }
 .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
@@ -2603,10 +2614,15 @@ figure:not(.fig) .impression .details figcaption {
 }
 @media screen and (min-width: 38rem) {
   .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
-    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
+    font-size: calc(1.25rem + 2.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
+  .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1921px) {
   .flip-flops .section-heading h2, .flip-flops .section-heading .features-item .icon, .features-item .flip-flops .section-heading .icon {
     font-size: 4.5rem;
   }
@@ -2642,7 +2658,6 @@ figure:not(.fig) .impression .details figcaption {
   max-width: 42em;
 }
 .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
-  text-transform: inherit;
   margin-bottom: 0.5em;
 }
 .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
@@ -2650,10 +2665,15 @@ figure:not(.fig) .impression .details figcaption {
 }
 @media screen and (min-width: 38rem) {
   .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
-    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
+    font-size: calc(1.25rem + 2.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
+  .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1921px) {
   .flip-flops .details .text h2, .flip-flops .details .text .features-item .icon, .features-item .flip-flops .details .text .icon {
     font-size: 4.5rem;
   }
@@ -2744,17 +2764,19 @@ figure:not(.fig) .impression .details figcaption {
   margin: 5vh auto;
 }
 .journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
-  text-transform: inherit;
-}
-.journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
   font-size: 1.25rem;
 }
 @media screen and (min-width: 38rem) {
   .journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
-    font-size: calc(1.25rem + 3.25 * ((100vw - 38rem) / 32));
+    font-size: calc(1.25rem + 2.25 * ((100vw - 38rem) / 32));
   }
 }
 @media screen and (min-width: 70rem) {
+  .journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1921px) {
   .journey .section-heading h2, .journey .section-heading .features-item .icon, .features-item .journey .section-heading .icon {
     font-size: 4.5rem;
   }
@@ -2764,6 +2786,11 @@ figure:not(.fig) .impression .details figcaption {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 4em;
   margin: 8vh auto;
+}
+@media (max-width: 1300px) {
+  .journey .group {
+    grid-gap: 2em;
+  }
 }
 .journey-item {
   position: relative;
@@ -2793,6 +2820,11 @@ figure:not(.fig) .impression .details figcaption {
 .journey-item:nth-of-type(even) .image {
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
           clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+@media (max-width: 1300px) {
+  .journey-item:nth-of-type(even) {
+    margin-top: 2em;
+  }
 }
 .journey-item.active .image {
   -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);

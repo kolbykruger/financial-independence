@@ -33,8 +33,11 @@
         margin: 5vh auto;
 
         h2 {
-            @include fluid('font-size', 1.25rem, 4.5rem);
-            text-transform: inherit;
+            @include fluid('font-size', 1.25rem, 3.5rem);
+
+            @media (min-width: 1921px) {
+                font-size: 4.5rem;
+            }
         }
     }
 
@@ -43,6 +46,10 @@
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 4em;
         margin: 8vh auto;
+
+        @media (max-width: 1300px) {
+            grid-gap: 2em;
+        }
     }
 
     &-item {
@@ -71,6 +78,10 @@
 
             .image {
                 clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            }
+
+            @media (max-width: 1300px) {
+                margin-top: 2em;
             }
         }
 

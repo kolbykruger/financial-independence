@@ -14,8 +14,11 @@
         margin: 0 auto 5vh;
 
         h2 {
-            @include fluid('font-size', 1.25rem, 4.5rem);
-            text-transform: inherit;
+            @include fluid('font-size', 1.25rem, 3.5rem);
+
+            @media (min-width: 1921px) {
+                font-size: 4.5rem;
+            }
         }
     }
     .container {
