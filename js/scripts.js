@@ -35,18 +35,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 word = elems[i].querySelector('h2'),
                 icon = elems[i].querySelector('.icon'),
                 parent = elem.parentNode.parentNode.parentNode,
-                wordDist = elem.dataset.word,
-                iconDist = elem.dataset.icon
+                wordDist = elem.dataset.word
+
+            console.log(parent)
 
             if (parent) {
                 new ScrollMagic.Scene({
                     triggerElement: parent,
                     triggerHook: 1,
-                    duration: '160%',
+                    duration: '140%',
                     reverse: true,
                 })
                     .setTween(
-                        TweenMax.to(word, 5, {
+                        TweenMax.to(word, {
                             y: wordDist,
                             ease: Power0.easeNone,
                         })

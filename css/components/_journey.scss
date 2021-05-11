@@ -101,6 +101,10 @@
 
         svg {
             width: 100%;
+
+            path {
+                transition: 240ms ease-out;
+            }
         }
     }
 

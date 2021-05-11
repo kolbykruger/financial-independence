@@ -11,6 +11,8 @@
     }
 
     &-contact {
+        flex: 1;
+
         a {
             text-decoration: none;
             color: $color-0;
@@ -25,6 +27,7 @@
 
         .email {
             font-size: 2.25rem;
+            text-align: center;
 
             a {
                 color: $color-1;
@@ -34,10 +37,11 @@
 
         .phone {
             font-size: 2.25rem;
+            text-align: center;
         }
 
         .address {
-            margin-top: 3em;
+            //margin-top: 3em;
         }
 
         .legal {
@@ -46,6 +50,7 @@
     }
 
     &-cta {
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -67,8 +72,11 @@
     &-links {
         list-style-type: none;
         padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
 
         li {
+            margin-right: 1.5em;
         }
 
         a {

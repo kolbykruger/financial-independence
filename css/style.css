@@ -1170,6 +1170,9 @@ body.menu-open .mobile_nav {
 .footer .group {
   justify-content: space-between;
 }
+.footer-contact {
+  flex: 1;
+}
 .footer-contact a {
   text-decoration: none;
   color: #000000;
@@ -1181,6 +1184,7 @@ body.menu-open .mobile_nav {
 }
 .footer-contact .email {
   font-size: 2.25rem;
+  text-align: center;
 }
 .footer-contact .email a {
   color: #33a3f5;
@@ -1188,14 +1192,13 @@ body.menu-open .mobile_nav {
 }
 .footer-contact .phone {
   font-size: 2.25rem;
-}
-.footer-contact .address {
-  margin-top: 3em;
+  text-align: center;
 }
 .footer-contact .legal {
   margin-top: 3em;
 }
 .footer-cta {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1214,6 +1217,11 @@ body.menu-open .mobile_nav {
 .footer-links {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.footer-links li {
+  margin-right: 1.5em;
 }
 .footer-links a {
   color: #000000;
@@ -2467,7 +2475,7 @@ figure:not(.fig) .impression .details figcaption {
 
 .inspiration {
   min-height: 40vh;
-  margin-top: 30vh;
+  margin-top: 15vh;
   display: grid;
   place-content: center;
 }
@@ -2561,27 +2569,27 @@ figure:not(.fig) .impression .details figcaption {
   color: #000000;
 }
 .inspiration-item:nth-of-type(1) h2, .inspiration-item:nth-of-type(1) .features-item .icon, .features-item .inspiration-item:nth-of-type(1) .icon {
-  transition: color 2.5s, transform 0.15s;
+  transition: color 5.5s, transform 0.25s;
 }
 .inspiration-item:nth-of-type(2) {
   grid-row: 2;
   grid-column: 3/span 2;
 }
 .inspiration-item:nth-of-type(2) h2, .inspiration-item:nth-of-type(2) .features-item .icon, .features-item .inspiration-item:nth-of-type(2) .icon {
-  transition: color 2.65s, transform 0.15s;
+  transition: color 5.65s, transform 0.15s;
 }
 .inspiration-item:nth-of-type(3) {
   grid-column: 5/span 2;
 }
 .inspiration-item:nth-of-type(3) h2, .inspiration-item:nth-of-type(3) .features-item .icon, .features-item .inspiration-item:nth-of-type(3) .icon {
-  transition: color 2.8s, transform 0.15s;
+  transition: color 5.8s, transform 0.13s;
 }
 .inspiration-item:nth-of-type(4) {
   grid-row: 2;
   grid-column: 7/span 2;
 }
 .inspiration-item:nth-of-type(4) h2, .inspiration-item:nth-of-type(4) .features-item .icon, .features-item .inspiration-item:nth-of-type(4) .icon {
-  transition: color 2.95s, transform 0.15s;
+  transition: color 5.95s, transform 0.1s;
 }
 
 .flip-flops {
@@ -2840,6 +2848,9 @@ figure:not(.fig) .impression .details figcaption {
 }
 .journey-line svg {
   width: 100%;
+}
+.journey-line svg path {
+  transition: 240ms ease-out;
 }
 .journey .buttons {
   margin-top: 5vh;

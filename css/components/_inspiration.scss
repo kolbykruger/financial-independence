@@ -1,6 +1,6 @@
 .inspiration {
     min-height: 40vh;
-    margin-top: 30vh;
+    margin-top: 15vh;
     display: grid;
     place-content: center;
 
@@ -86,7 +86,7 @@
 
         &:nth-of-type(1) {
             h2 {
-                transition: color 2.5s, transform 0.15s;
+                transition: color 5.5s, transform 0.25s;
             }
         }
         &:nth-of-type(2) {
@@ -94,7 +94,7 @@
             grid-column: 3 / span 2;
 
             h2 {
-                transition: color 2.65s, transform 0.15s;
+                transition: color 5.65s, transform 0.15s;
             }
         }
         &:nth-of-type(3) {
@@ -102,7 +102,7 @@
 
             h2 {
                 //transform: translate(0, 3em);
-                transition: color 2.8s, transform 0.15s;
+                transition: color 5.8s, transform 0.13s;
             }
         }
         &:nth-of-type(4) {
@@ -111,7 +111,7 @@
 
             h2 {
                 //transform: translate(0, 5em);
-                transition: color 2.95s, transform 0.15s;
+                transition: color 5.95s, transform 0.1s;
             }
         }
     }
